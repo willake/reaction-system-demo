@@ -8,11 +8,16 @@ namespace WillakeD.ReactionSystemDemo
         public Color onColor;
         public Color offColor;
 
-        public SpriteRenderer
+        public SpriteRenderer sr;
+
+        protected SpriteRenderer GetSpriteRenderer()
+        {
+            return sr ?? (sr = GetComponent<SpriteRenderer>());
+        }
 
         public override void Execute(bool value)
         {
-            state.SetValue(value ? onColor : offColor);
+            sr.color = value ? onColor : offColor;
         }
     }
 }
