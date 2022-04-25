@@ -1,9 +1,8 @@
 namespace WillakeD.ReactionSystemDemo
 {
-    public class SetIntStateReaction : Reaction
+    public class TickIntStateReaction : Reaction
     {
         public IntState state = null;
-        public int value;
 
         public override void Execute()
         {
