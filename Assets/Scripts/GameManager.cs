@@ -9,18 +9,18 @@ namespace WillakeD.ReactionSystemDemo
         public const string LAYER_INTERACTABLE = "Interactable";
         public Camera gameCamera;
 
-        protected Camera GetGameCamera()
+        private Camera GetGameCamera()
         {
             return gameCamera ?? (gameCamera = Camera.main);
         }
 
 
         // Update is called once per frame
-        void Update()
+        private void Update()
         {
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-
+                HandleMouseClick();
             }
         }
 

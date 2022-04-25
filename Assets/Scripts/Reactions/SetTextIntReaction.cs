@@ -1,15 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace WillakeD.ReactionSystemDemo
 {
     public class SetTextIntReaction : Reaction<int>
     {
-        public Text text;
+        public TextMeshProUGUI text;
 
-        protected Text GetTextComponent()
+        protected TextMeshProUGUI GetTextComponent()
         {
-            return text ?? (text = GetComponent<Text>());
+            return text ?? (text = GetComponent<TextMeshProUGUI>());
         }
 
         public override void Execute(int value)
